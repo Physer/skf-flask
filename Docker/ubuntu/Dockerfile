@@ -24,8 +24,7 @@ RUN /usr/sbin/update-rc.d -f nginx defaults
 RUN rm /etc/nginx/sites-enabled/default
 COPY /nginx-config.conf /etc/nginx/sites-enabled/default
 RUN service nginx restart
-EXPOSE 80
-EXPOSE 8888
+EXPOSE 443
 
 # Set up Python and PIP
 RUN apt-get install python3.7 -y
