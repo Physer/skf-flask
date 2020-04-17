@@ -30,7 +30,7 @@ SQLALCHEMY_ECHO = False
 # JWT settings
 
 jwt_secret = secrets.token_urlsafe(64)
-JWT_SECRET = os.environ.get("SKF_JWT_SECRET")
+JWT_SECRET = os.environ.get("SKF_JWT_SECRET") or jwt_secret
 if JWT_SECRET == "":
     print("JWT_SECRET is empty! you need to set the SKF_JWT_SECRET environment variable")
           
