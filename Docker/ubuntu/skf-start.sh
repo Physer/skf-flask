@@ -4,8 +4,8 @@
 APIENDPOINT=$ORIGIN
 if [ -z "$APIENDPOINT" ]
 then
-    echo "No API endpoint found, please enter one with the ORIGIN environment flag"
-    exit
+    echo "No API endpoint found, defaulting to localhost"
+    APIENDPOINT="localhost"
 fi
 
 echo "Selected origin for the API endpoint: ${APIENDPOINT}"
